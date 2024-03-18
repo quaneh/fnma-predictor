@@ -51,16 +51,20 @@ After this, we need to carry out three more steps:
 
 1. Create an IAM Execution Role.
     
-    Go to IAM --> Create Role --> Elastic Container Service Task --> AmazonElasticContainerServiceTaskExecutionRolePolicy
+    _Go to IAM --> Create Role --> Elastic Container Service Task --> AmazonElasticContainerServiceTaskExecutionRolePolicy_
+
 2. Create a Security Group.
     
-    Go to EC2 --> Security Groups --> Create Group --> Add Inbound Rule on Port 80
+    _Go to EC2 --> Security Groups --> Create Group --> Add Inbound Rule on Port 80_
+
 3. Create an ECS Cluster.
     
-    Choose AWS Fargate Cluster
+    _Choose AWS Fargate Cluster_
+
 4. Create a Task Definition.
     
-    Task Role: None --> Executor Role: AmazonElasticContainerServiceTaskExecutionRolePolicy
+    _Task Role: None --> Executor Role: AmazonElasticContainerServiceTaskExecutionRolePolicy_
+
 5. Run the Task.
 
 Your API will now be running on ECS and can be accessed at the public URL provided.
