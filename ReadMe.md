@@ -50,12 +50,16 @@ And push the image to the repository
 After this, we need to carry out three more steps:
 
 1. Create an IAM Execution Role.
+    
     Go to IAM --> Create Role --> Elastic Container Service Task --> AmazonElasticContainerServiceTaskExecutionRolePolicy
 2. Create a Security Group.
+    
     Go to EC2 --> Security Groups --> Create Group --> Add Inbound Rule on Port 80
 3. Create an ECS Cluster.
+    
     Choose AWS Fargate Cluster
 4. Create a Task Definition.
+    
     Task Role: None --> Executor Role: AmazonElasticContainerServiceTaskExecutionRolePolicy
 5. Run the Task.
 
